@@ -55,6 +55,4 @@ public class FuncionariosDTO extends Tabela {
     public void setSituacao(Character situacao) {
         this.situacao.valorCampo = situacao;
     }
-
-
 }

@@ -23,7 +23,7 @@ public class Campo<E> {
         this.chavePrimaria = chavePrimaria;
         this.nomeCampo = nomeCampo;
     }
-    
+
     public Campo(String nomeCampo, String apelidoCampo, boolean chavePrimaria) { //String apelido
         this.chavePrimaria = chavePrimaria;
         this.nomeCampo = nomeCampo;

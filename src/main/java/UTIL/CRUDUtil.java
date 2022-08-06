@@ -5,6 +5,7 @@ import java.sql.ResultSetMetaData;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+
 public class CRUDUtil {
 
     public static TableModel resultSetToTableModel(ResultSet rs) {
@@ -13,24 +14,21 @@ public class CRUDUtil {
             int NumerodeColunas = metaData.getColumnCount();
             Vector NomeDasColunas = new Vector();
 
-            // Get the column names
+            // Pegar nome das colunas
             for (int Coluna = 0; Coluna < NumerodeColunas; Coluna++) {
                 NomeDasColunas.addElement(metaData.getColumnLabel(Coluna + 1));
             }
 
-            // Get all rows.
+            // Pegar as linhas
             Vector Linhas = new Vector();
 
             while (rs.next()) {
                 Vector NovaLinha = new Vector();
-
                 for (int i = 1; i <= NumerodeColunas; i++) {
                     NovaLinha.addElement(rs.getObject(i));
                 }
-
                 Linhas.addElement(NovaLinha);
             }
-
             return new DefaultTableModel(Linhas, NomeDasColunas);
         } catch (Exception e) {
             e.printStackTrace();

@@ -63,7 +63,6 @@ public class ComandosDAO {
                 comandoWhere += Icampo.nomeCampo + " = " + Icampo.valorCampo.toString();
             }
         }
-
         String ComandoFinal = comando + comandoWhere;
         BancoDAO banco = new BancoDAO();
         banco.executaComando(ComandoFinal);
@@ -107,9 +106,9 @@ public class ComandosDAO {
         }
         valoresTabela += ")";
         // fim coleta valores
+
         BancoDAO banco = new BancoDAO();
         banco.executaComando(Comando + CamposTabela + valoresTabela);
         return Comando + CamposTabela + valoresTabela;
-
     }
 }

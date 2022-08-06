@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class VendasDTO extends Tabela {
 
-    private Campo<Integer> id_venda = new Campo<>("id_venda", "Identificador", true); 
-    private Campo<Integer> fk_cliente = new Campo<>("fk_cliente","Cliente Comprou" );
+    private Campo<Integer> id_venda = new Campo<>("id_venda", "Identificador", true);
+    private Campo<Integer> fk_cliente = new Campo<>("fk_cliente", "Cliente Comprou");
     private Campo<Integer> fk_produto = new Campo<>("fk_produto", "Produdo Vendido");
     private Campo<Integer> fk_funcionario = new Campo<>("fk_funcionario", "Funcionário Vendeu");
     private Campo<Integer> quantidade = new Campo<>("quantidade", "Quantidade");

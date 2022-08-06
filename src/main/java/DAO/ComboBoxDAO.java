@@ -72,5 +72,4 @@ public class ComboBoxDAO {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }
-
 }

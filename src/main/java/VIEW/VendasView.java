@@ -437,10 +437,10 @@ public class VendasView extends javax.swing.JFrame {
         VendasDTO cli = new VendasDTO();
         ComandosDAO comando = new ComandosDAO();
         String mensagemApagar = "Deseja realmente apagar a Venda? \n\n"
-                + "Venda: " + edtID.getSelectedText()
+                + "Venda ID: " + edtID.getText()
                 + "\n\nEsta ação não poderá ser revertida!!!";
 
-        if (JOptionPane.showConfirmDialog(this, mensagemApagar, "Apagando Cliente", 0, 2) == 0) {
+        if (JOptionPane.showConfirmDialog(this, mensagemApagar, "Apagando Venda", 0, 2) == 0) {
             cli.setId_venda(Integer.parseInt(edtID.getText()));
             comando.apagaRegistro(cli);
             limpaCamposTela();
